@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -9,20 +10,21 @@ int main(void)
 {
 	int i;
 	unsigned long fib1 = 1, fib2 = 2, fib;
+	char fib_str[20];
 
-	_putchar('0' + fib1);
-	for (i = 2; i <= 50; i++)
+	printf("%lu, %lu", fib1, fib2);
+
+	for (i = 3; i <= 50; i++)
 	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar('0' + fib2);
-
 		fib = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = fib;
+
+		sprintf(fib_str, "%lu", fib);
+		printf(", %s", fib_str);
 	}
 
-	_putchar('\n');
+	printf("\n");
 
-	return 0;
+	return (0);
 }
