@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * compute_sum - Computes the sum of multiples of 3 or 5 below 1024
  *
@@ -17,6 +18,7 @@ int compute_sum(void)
 
 	return sum;
 }
+
 /**
  * main - Entry point
  *
@@ -24,13 +26,16 @@ int compute_sum(void)
  */
 int main(void)
 {
-	int sum = compute_sum();
+	int sum;
 
-	_putchar(sum / 1000 + '0');
+	sum = compute_sum();
+	_putchar(sum / 100000 + '0');
+	_putchar((sum / 10000) % 10 + '0');
+	_putchar((sum / 1000) % 10 + '0');
 	_putchar((sum / 100) % 10 + '0');
 	_putchar((sum / 10) % 10 + '0');
 	_putchar(sum % 10 + '0');
 	_putchar('\n');
 
-	return 0;
+	return (0);
 }
