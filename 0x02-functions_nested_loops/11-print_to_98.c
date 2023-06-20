@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * print_to_98 - Prints all numbers from a given integer up to 98
@@ -11,17 +12,34 @@ void print_to_98(int n)
 {
 	if (n <= 98)
 	{
-		for (int i = n; i <= 98; i++)
+		for (; n <= 98; n++)
 		{
-			printf("%d, ", i);
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
 		}
 	}
 	else
 	{
-		for (int i = n; i >= 98; i--)
+		for (; n >= 98; n--)
 		{
-			printf("%d, ", i);
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
 		}
 	}
-	printf("98\n");
 }
