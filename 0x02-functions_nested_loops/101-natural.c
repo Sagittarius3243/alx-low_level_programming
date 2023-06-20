@@ -16,7 +16,7 @@ int compute_sum(void)
 			sum += i;
 	}
 
-	return sum;
+	return (sum);
 }
 
 /**
