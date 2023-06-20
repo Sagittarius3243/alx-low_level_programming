@@ -11,18 +11,13 @@ int main(void)
 	unsigned long fib1 = 1, fib2 = 2, fib;
 
 	_putchar('0' + fib1);
-	_putchar(',');
-	_putchar(' ');
-	_putchar('0' + fib2);
-
-	for (i = 3; i <= 50; i++)
+	for (i = 2; i <= 50; i++)
 	{
-		fib = fib1 + fib2;
 		_putchar(',');
 		_putchar(' ');
-		if (fib > 9)
-			_putchar('0' + (fib / 10));
-		_putchar('0' + (fib % 10));
+		_putchar('0' + fib2);
+
+		fib = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = fib;
 	}
