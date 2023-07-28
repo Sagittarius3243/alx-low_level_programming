@@ -9,14 +9,14 @@
  */
 int main(int argc, char *argv[])
 {
-    int i;
+	int i;
 
-    for (i = 0; i < argc; i++)
-    {
-        (void)argv[i]; /* To silence unused variable warning from Betty style checker */
-    }
+	for (i = 0; i < argc; i++)
+	{
+		(void)argv[i];
+	}
 
-    printf("%d\n", argc - 1);
+	printf("%d\n", argc - 1);
 
-    return (0);
+	return (0);
 }
